@@ -5,6 +5,8 @@ module.exports = transform
 module.exports.fromString = constantify
 
 function transform(file) {
+  if (/\.json$/.test(file)) return through()
+
   var buffer = ''
 
   return through(function(data) {
