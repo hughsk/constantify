@@ -40,7 +40,12 @@ function constantify(buffer) {
       rewrite(node, list[node.name])
   })
 
-  return generate(ast)
+  return generate(ast, {
+    format: {
+        semicolons: false
+      , indent: { style: '  ' }
+    }
+  })
 }
 
 function isConst(node) {

@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "browser": "index.js",
+  "bin": {
+    "constantify": "bin/constantify"
+  },
   "dependencies": {
     "static-eval": "0.0.0",
     "through": "~2.3.4",

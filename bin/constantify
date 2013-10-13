@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var constantify = require('../from-string')
+var buffer = ''
+
+var stream = process.argv[2]
+  ? require('fs').createReadStream(process.argv[2])
+  : process.stdin
+
+stream.resume()
+stream.on('data', function(data) {
+  buffer += data
+})
+stream.once('end', function() {
+  console.log(constantify(buffer))
+})

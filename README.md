@@ -63,6 +63,13 @@ var transformed = constantify.fromString(file)
 console.log(transformed)
 ```
 
+You can also use it as a standalone command-line tool if installed globally:
+
+``` bash
+constantify index.js > bundled.js
+cat index.js | constantify > bundled.js
+```
+
 ## License ##
 
 MIT. See [LICENSE.md](http://github.com/hughsk/constantify/blob/master/LICENSE.md) for details.
