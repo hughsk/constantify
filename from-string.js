@@ -10,7 +10,7 @@ function constantify(buffer) {
   var walk = astw(ast)
   var body = ast.body
   var clear = []
-  var list = {}
+  var list = Object.create(null)
 
   for (var i = 0; i < body.length; i += 1) {
     var node = body[i]
